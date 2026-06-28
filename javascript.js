@@ -1,4 +1,6 @@
 const container = document.getElementById("containerDiv");
+container.style.width = "760px";
+container.style.height = "760px";
 
 /* 
 This is the first and second step, which is to make a webpage
@@ -28,13 +30,19 @@ for (let i = 0; i < rows; i++) {
 let hover = document.getElementsByClassName("column");
 for (let i = 0; i < hover.length; i++) {
     hover[i].addEventListener('mouseenter', (event) => {
-        event.target.style.backgroundColor = "red";
+        event.target.style.backgroundColor = "gray";
     });
     hover[i].addEventListener('mouseleave', function (e) {
-        e.target.style.backgroundColor = "white";
+        e.target.style.backgroundColor = "azure";
     });
 }
 
 /* 
 4th Step:
 */
+const button = document.querySelector("button");
+button.textContent = "Change Dimensions";
+button.addEventListener('click', (event) => {
+    event = prompt("What dimensions do you want the grid sketch: ");
+})
+
